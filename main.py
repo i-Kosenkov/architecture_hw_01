@@ -1,16 +1,63 @@
-# This is a sample Python script.
+class ModelStore(object):
+    def __init__(self, models, scenes, flashes, cameras, chnage_observers):
+        self.models = models
+        self.scenes = scenes
+        self.flashes = flashes
+        self.cameras = cameras
+        self.chnage_observers = chnage_observers
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+    def get_scena(self):
+        return
+
+    def get_notify_change(self):
+        return
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+class Poligon(ModelStore):
+    def __init__(self, points):
+        self.points = points
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class PoligonalModel(Poligon):
+    def __init__(self, poligons, textures):
+        self.poligons = poligons
+        self.textures = textures
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+class Flash(ModelStore):
+    def __init__(self, location, angle, color, power):
+        self.location = location
+        self.angle = angle
+        self.color = color
+        self.power = power
+
+    def rotate(self):
+        return
+
+    def move(self):
+        return
+
+
+class Camera(ModelStore):
+    def __init__(self, location, angel):
+        self.location = location
+        self.angel = angel
+
+    def rotate(self):
+        return
+
+    def move(self):
+        return
+
+
+class Scene(ModelStore):
+    def __init__(self, id, models, flashes):
+        self.id = id
+        self.models = models
+        self.flashes = flashes
+
+    def method1(type):
+        return type
+
+    def method2(type):
+        return type
